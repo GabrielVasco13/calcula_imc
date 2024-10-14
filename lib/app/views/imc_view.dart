@@ -64,9 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {
-                widget.viewModel.calculateImc();
-              },
+              onPressed: () => widget.viewModel.calculateImc(),
               child: const Text('Calcular IMC'),
             ),
             const SizedBox(height: 20),
