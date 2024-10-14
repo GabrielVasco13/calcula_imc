@@ -1,3 +1,4 @@
+import 'package:calcular_imc/app/view_models/imc_view_model.dart';
 import 'package:calcular_imc/app/views/imc_view.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(),
+      home: MyHomePage(viewModel: ImcViewModel()),
     );
   }
 }

@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 class ImcViewModel extends ChangeNotifier {
   final ImcModel _imcModel = ImcModel(weight: 0, height: 0);
 
-  double get imc => _imcModel.imc;
+  double _imc = 0;
+
+  double get imc => _imc;
 
   void setHeight(double height) {
     _imcModel.height = height;
@@ -17,7 +19,7 @@ class ImcViewModel extends ChangeNotifier {
   }
 
   void calculateImc() {
-    _imcModel.calculateImc();
+    _imc = _imcModel.calculateImc();
     notifyListeners();
   }
 }
